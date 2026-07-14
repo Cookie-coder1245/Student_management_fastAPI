@@ -1,0 +1,110 @@
+/* ============================================================
+   THE REGISTRY — design tokens
+   A campus-registry aesthetic: deep indigo ledgers, a brass
+   seal accent, and a cool teal for anything "live" or linked.
+   ============================================================ */
+
+:root {
+  --bg-deep: #0e1425;
+  --bg-surface: #141b32;
+  --bg-surface-2: #1b2340;
+  --bg-surface-3: #232c4f;
+  --line: #2a3457;
+  --line-soft: #202847;
+
+  --gold: #e8a94c;
+  --gold-soft: rgba(232, 169, 76, 0.16);
+  --teal: #4fbdb0;
+  --teal-soft: rgba(79, 189, 176, 0.14);
+  --red: #e0785f;
+  --red-soft: rgba(224, 120, 95, 0.14);
+
+  --text-primary: #edeff6;
+  --text-muted: #8d93b0;
+  --text-faint: #5d648a;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 9px;
+
+  --shadow-card: 0 20px 60px -25px rgba(0, 0, 0, 0.6);
+  --shadow-pop: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-deep);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(79, 189, 176, 0.07), transparent 40%),
+    radial-gradient(circle at 88% 0%, rgba(232, 169, 76, 0.08), transparent 45%);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface-3);
+  border-radius: 10px;
+  border: 2px solid var(--bg-deep);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
